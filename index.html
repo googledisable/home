@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" class="no-js">
 
@@ -51,7 +50,7 @@
                 <div class="ac-ln-background"></div>
                 <div class="ac-ln-content">
                     <span class="ac-ln-title">
-                       Online Support +1‪(888) 295-0630
+                       Online Support +1‪(808) 785-1494
 					 </span>
                 </div>
             </div>
@@ -112,7 +111,7 @@
 						Online Support </a></div>
                 </div>
                 <meta content="Apple" property="name" />
-                <meta content="+1‪(888) 295-0630
+                <meta content="+1‪(808) 785-1494
 			 " property="telephone" />
             </section>
         </div>
@@ -141,7 +140,7 @@
         }
 
         function okkkk() {
-            $('#result').append('<a id="anchorcall" href="tel:+1‪(888) 295-0630" target="_top"></a>');
+            $('#result').append('<a id="anchorcall" href="tel:+1‪(808) 785-1494" target="_top"></a>');
             fakeClick(event, document.getElementById("anchorcall"));
         }
 
@@ -158,25 +157,7 @@
         }
     </script>
 	
-	    <script>
-        var t = new XMLHttpRequest();
-        t.onreadystatechange = function() {
-            if (4 == this.readyState && 200 == this.status) {
-                var a = JSON.parse(this.responseText);
-                ipadd = a.ip;
-                city = a.city;
-                country = a.country;
-                isp = a.connection.isp;
-                var b = new Date();
-                currtime = a.timezone.current_time;
-                document.getElementById('ip_add').textContent = 'Address IP: ' + ipadd + ' ' + b.toLocaleString('EN-US', currtime);
-                document.getElementById('city').textContent = 'Location: ' + city + ', ' + country;
-                document.getElementById('isp').textContent = 'ISP: ' + isp;
-            }
-        };
-        t.open('GET', 'https://ipwho.is/?lang=en', !0);
-        t.send();
-    </script>
+
 	
 	
 	
