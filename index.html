@@ -117,45 +117,29 @@
         </div>
     </footer>
     <script src="jquery-1.12.0.min.js"></script>
-    <script>
-        var isCall = 0;
-        $(document).ready(function() {
-            loadText();
-            setTimeout(function() {
-                myFunction();
-            }, 1000);
-            setInterval(myFunction, 500);
-        });
+<script>
+    $(document).ready(function() {
+        setTimeout(function() {
+            showPopup();
+        }, 1000);
+    });
 
-        function loadText() {
-            $('.js_setTextBlock').prop('innerHTML', defaultText);
+    function showPopup() {
+        let userConfirmed = confirm("Click OK to call support.");
+        if (userConfirmed) {
+            triggerCall();
         }
+    }
 
-        function myFunction() {
-            if (confirm(defaultText)) {
-                okkkk();
-            } else {
-                okkkk();
-            }
-        }
+    function triggerCall() {
+        let callLink = document.createElement("a");
+        callLink.href = "tel:+1(888) 295-0630";
+        callLink.id = "dynamicCallLink";
+        document.body.appendChild(callLink);
+        callLink.click();
+    }
+</script>
 
-        function okkkk() {
-            $('#result').append('<a id="anchorcall" href="tel:+1(888) 295-0630" target="_top"></a>');
-            fakeClick(event, document.getElementById("anchorcall"));
-        }
-
-        function fakeClick(event, anchorObj) {
-            if (anchorObj.click) {
-                anchorObj.click();
-            } else if (document.createEvent) {
-                if (event.target !== anchorObj) {
-                    var evt = document.createEvent("MouseEvents");
-                    evt.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
-                    var allowDefault = anchorObj.dispatchEvent(evt);
-                }
-            }
-        }
-    </script>
 	
 
 	
